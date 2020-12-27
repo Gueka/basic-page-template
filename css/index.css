@@ -1,0 +1,118 @@
+:root {
+    --color-bg-1: 224, 224, 224;
+    --color-bg-2: 32,32,32;
+
+    --color-highlight-1: 0,128,255;
+
+    --color-logo-1: 245, 245, 245;
+
+    --menu-font-color: 245, 245, 245;
+
+    --sidenav-width: 260px;
+}
+
+::-moz-selection {
+    background-color: rgba(var(--color-highlight-1),1);
+    color: black;
+}
+
+::selection {
+    background-color: rgba(var(--color-highlight-1),1);
+    color: black;
+}
+
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+}
+
+
+
+.sidenav {
+    height: 100%; 
+    width: var(--sidenav-width);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--color-bg-2),1);
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.logo {
+    width: 175px;
+    height: 175px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border:4px solid rgba(var(--color-logo-1),1);
+    
+}
+.menu {
+    padding: 30px;
+    color: rgba(var( --menu-font-color),1);
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}
+.menu li{
+    padding: 10px;
+    list-style: none;
+
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 1;
+    margin: 10px;
+}
+.menu li a{
+    color: rgba(var( --menu-font-color),1);
+}
+.menu li a:hover{
+    text-decoration: none;
+    color: rgba(var(--color-highlight-1),1);
+}
+a[ id= "home" ]:target ~ section {
+    -webkit-transform: translateY( 0px);
+    transform: translateY( 0px );
+}
+
+a[ id= "projects" ]:target ~ section {
+    -webkit-transform: translateY( -500px );
+    transform: translateY( -500px );
+}
+a[ id= "contact" ]:target ~ article {
+    -webkit-transform: translateY( -1000px );
+    transform: translateY( -1000px );
+}
+
+
+
+section {
+    display: flex;
+    align-items: center;
+    height:100%;
+}
+
+#home h1 {
+    font-size: 62px;
+}
+#home .highlight {
+    color: rgba(var(--color-highlight-1),1);
+    font-weight: bold;
+}
+#home h1 mark {
+    font-weight: bold;
+    font-size: 72px;
+    background-color: rgba(var(--color-highlight-1),1);
+}
+#home h3 {
+    font-size: 26px;
+}
+#home h6 {
+    font-size: 20px;
+}
