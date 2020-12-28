@@ -32,7 +32,6 @@ html, body {
 
 .sidenav {
     height: 100%; 
-    width: var(--sidenav-width);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -42,8 +41,7 @@ html, body {
     padding-top: 20px;
 }
 .logo {
-    width: 175px;
-    height: 175px;
+    width: 70%;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
@@ -53,20 +51,12 @@ html, body {
 .menu {
     padding: 30px;
     color: rgba(var( --menu-font-color),1);
-    font-weight: bold;
-    font-size: larger;
     text-align: center;
+    z-index: 1;
 }
 .menu li{
-    padding: 10px;
     list-style: none;
-
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    z-index: 1;
-    margin: 10px;
 }
 .menu li a{
     color: rgba(var( --menu-font-color),1);
@@ -74,19 +64,6 @@ html, body {
 .menu li a:hover{
     text-decoration: none;
     color: rgba(var(--color-highlight-1),1);
-}
-a[ id= "home" ]:target ~ section {
-    -webkit-transform: translateY( 0px);
-    transform: translateY( 0px );
-}
-
-a[ id= "projects" ]:target ~ section {
-    -webkit-transform: translateY( -500px );
-    transform: translateY( -500px );
-}
-a[ id= "contact" ]:target ~ article {
-    -webkit-transform: translateY( -1000px );
-    transform: translateY( -1000px );
 }
 
 
